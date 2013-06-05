@@ -1,0 +1,17 @@
+
+<%= div_for(study) do %>
+<tr>
+    <td><%= study.title %></td>
+	<td><%= study.number %></td>
+	<td><%= study.objective %></td>
+	<td><%= study.NoOfSites %></td>
+	<td><%= study.NoOfSections %></td>
+	<td><%= study.total %></td>
+	<td><%= study.average %></td>
+	<td><%= study.range %></td>
+	<td><%= study.created_at %></td>
+    <td><%= link_to 'Destroy Study', [study.project, study],
+               :confirm => 'Are you sure?',
+               :method => :delete %></td>
+ </tr>
+<% end %>

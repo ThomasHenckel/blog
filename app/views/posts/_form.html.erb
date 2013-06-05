@@ -1,0 +1,28 @@
+<% @post.tags.build %>
+<%= simple_form_for @post, :html => { :class => 'form-horizontal' } do |f| %>
+
+  
+    <% if notification = f.error_notification %>
+    <div class="alert alert-error fade in">
+      <a class="close" data-dismiss="alert" href="#">&times;</a>
+      <%= notification %>
+    </div>
+  <% end %>
+  
+  <%= f.input :name %>
+
+  
+  <%= f.input :title %>
+
+  
+<%= f.input :content, :input_html => { :class => "span6" } %>
+ 
+    <h2>Tags</h2>
+	<%= render :partial => 'tags/form',
+		:locals => {:form => f} %>
+		
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= submit_tag 'Cancel', :type => :reset, :class => "btn btn-danger" %>
+  </div>
+<% end %>

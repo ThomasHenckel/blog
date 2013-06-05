@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  number: MyString
+  objective: MyText
+  NoOfSites: 1
+  NoOfSections: 1
+  total: 1
+  average: 9.99
+  range: 1
+  project: 
+
+two:
+  title: MyString
+  number: MyString
+  objective: MyText
+  NoOfSites: 1
+  NoOfSections: 1
+  total: 1
+  average: 9.99
+  range: 1
+  project: 

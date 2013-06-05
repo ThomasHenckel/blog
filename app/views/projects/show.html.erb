@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= best_in_place @project, :name %>
+
+</p>
+<div id="chart_div" style="width: 900px; height: 500px;"></div>
+
+<p>
+  <b>Sponsor:</b>
+  <%= @project.sponsor %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @project.user.email %>
+</p>
+
+<h2>Studies</h2>
+  <table>
+  <tr>
+    <th>Title</th>
+	<th>Study number</th>
+	<th>Objective</th>
+	<th>No. Of Sites </th>
+	<th>No. Of Sections</th>
+	<th>Total</th>
+	<th>Average</th>
+	<th>Range</th>
+	<th>Created</th>
+    <th></th>
+ </tr>
+    <%= render @project.studies %>
+  </table>
+
+
+<b>Studies:</b>
+<%= render "studies/form" %>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
